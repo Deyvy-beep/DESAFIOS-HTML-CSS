@@ -13,6 +13,8 @@ p{
     color: rgb(176, 176, 176);
 }
 
-a{
-    color: aquamarine;
+.Icone-button{
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
 }
