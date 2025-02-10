@@ -1,13 +1,35 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root {
+    --cor0: #c5ebd6;
+    --cor1: #83E1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+    --fonte-padrão: Arial, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-droid: 'Android', cursive;
+}
+
 body {
-    background-color: #84e1ad;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor1);
+    font-family: var(--fonte-padrão);
     margin: auto;
 }
 
 header {
-    background-image: linear-gradient(to top, #14472b, #2c8d57, #3cd781);
+    background-image: linear-gradient(to top, var(--cor5), var(--cor4), var(--cor3));
+    font-family: var(--fonte-destaque);
+
     margin: auto;
     padding: 30px;
     box-shadow: 0px 1px 15px 10px rgba(0, 0, 0, 0.342);
@@ -15,12 +37,15 @@ header {
     text-align: center;
 }
 
-header > nav {
+nav {
+    background-color: var(--cor5);
     text-align: left;
+
+    padding: 10px;
 }
 
 nav > a {
-    color: #84e1ad;
+    color: var(--cor1);
 
     text-decoration: none;
     padding: 7px;
@@ -30,37 +55,45 @@ nav > a {
 }
 
 nav > a:hover {
-    color: #14472b;
-    background-color: #84e1ad;
+    color: var(--cor5);
+    background-color: var(--cor1);
     padding: 7px;
     border-radius: 7px;
 }
 
 main {
+    min-width: 300px;
+    max-width: 800px;
     text-align: center;
     background-color: white;
+    
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
+    border-radius: 0px 0px 20px 20px;
     padding: 10px 30px 10px 30px;
-    margin: 0px 30px 30px 30px;
+    margin: auto;
 }
 
-main > p {
+article > h1 {
+    font-family: var(--fonte-droid);
+}
+
+article > h2 {
+    font-family: var(--fonte-droid);
+}
+
+article > p {
     text-align: justify;
-    text-indent: 25px;
+    text-indent: 10px;
 }
 
-main > iframe {
-    border: 20px solid #14472b;
-}
 
-div > ul {
-    display: flex;
-}
 
 footer {
     text-align: center;
     color: white;
-    background-color: #14472b;
+    background-color: var(--cor5);
     
+    margin: 80px 0px 0px 0px;
     padding: 10px
 }
 
