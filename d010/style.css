@@ -27,31 +27,40 @@ body {
 }
 
 header {
-    background-image: linear-gradient(to top, var(--cor5), var(--cor4), var(--cor3));
+    background-image: linear-gradient(to top, var(--cor5), var(--cor3));
     font-family: var(--fonte-destaque);
 
     margin: auto;
     padding: 30px;
-    box-shadow: 0px 1px 15px 10px rgba(0, 0, 0, 0.342);
     color: white;
     text-align: center;
+}
+
+header > h1 {
+    font-family: var(--fonte-destaque);
+    font-size: 3.2em;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.479);
+    font-weight: lighter;
+}
+
+header > p {
+    font-family: var(--fonte-padrão);
+    font-size: 1.2em;
 }
 
 nav {
     background-color: var(--cor5);
     text-align: left;
-
     padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.356);
 }
 
 nav > a {
     color: var(--cor1);
-
     text-decoration: none;
     padding: 7px;
     border-radius: 7px;
-
-    transition: color 0.3s ease-in-out 0.1s, background-color 0.3s ease-in-out 0.1s;
+    transition: .5s;
 }
 
 nav > a:hover {
@@ -66,37 +75,117 @@ main {
     max-width: 800px;
     text-align: center;
     background-color: white;
-    
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.37);
-    border-radius: 0px 0px 20px 20px;
     padding: 10px 30px 10px 30px;
     margin: auto;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.459);
 }
 
-article > h1 {
+main h1 {
     font-family: var(--fonte-droid);
+    font-size: 2em;
+    color: var(--cor5);
+    font-weight: lighter;
 }
 
-article > h2 {
+main h2 {
     font-family: var(--fonte-droid);
-}
-
-article > p {
-    text-align: justify;
+    font-size: 1.6em;
+    text-align: left;
     text-indent: 10px;
+    color: var(--cor4);
+    font-weight: lighter;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
 }
 
+main p {
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1.5em;
+}
 
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+main a {
+    text-decoration: none;
+    color: var(--cor5);
+    font-weight: bolder;
+    padding: 2px 6px;
+}
+
+main a:hover {
+    background-color: var(--cor1);
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
+a.externo::after {
+    content: '\1F517';
+}
+
+div.video {
+    background-color: var(--cor5);
+    margin: 0px -30px 20px -30px;
+    padding: 20px;
+    padding-bottom: 58%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+aside {
+    background-color: var(--cor0);
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.459);
+    padding: 15px;
+    margin: 30px;
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -15px -15px 0px -15px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside > ul {
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
+}
 
 footer {
     text-align: center;
     color: white;
     background-color: var(--cor5);
-    
     margin: 80px 0px 0px 0px;
     padding: 10px
 }
 
 footer > p {
-    margin: auto;
+    margin: 0px;
+    font-size: 0.8em;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bolder;
+}
+
+footer a:hover {
+    color: var(--cor1);
+    text-decoration: underline;
+    font-weight: bold;
 }
